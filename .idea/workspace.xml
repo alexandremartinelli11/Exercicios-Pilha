@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efb70f16-32cf-4ebb-9cd2-eb7b2527ab79" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Exercicio01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Exercicio02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Exercicio03.java" afterDir="false" />
-    </list>
+    <list default="true" id="efb70f16-32cf-4ebb-9cd2-eb7b2527ab79" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +57,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/!Facul/1-Semestres/3-semestre/EstruturaDeDados/Java/exercicios/Lista01",
+    "last_opened_file_path": "D:/!Facul/1-Semestres/3-semestre/EstruturaDeDados/Java/exercicios/Lista03",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -154,6 +150,7 @@
       <workItem from="1747951406786" duration="320000" />
       <workItem from="1747952016884" duration="914000" />
       <workItem from="1747952966519" duration="30000" />
+      <workItem from="1747953042701" duration="142000" />
     </task>
     <servers />
   </component>
