@@ -1,17 +1,16 @@
 import java.util.LinkedList;
-import java.lang.Integer;
 
 public class Exercicio03 {
     public static void main(String[] args) {
         LinkedList<Integer> lista1 = new LinkedList<>();
         LinkedList<Integer> lista2 = new LinkedList<>();
 
+        lista1.add(1);
         lista1.add(2);
-        lista1.add(5);
-        lista1.add(6);
+        lista1.add(3);
         lista2.add(1);
-        lista2.add(3);
-        lista2.add(4);
+        lista2.add(5);
+        lista2.add(6);
 
         System.out.println(listaIntercalada(lista1, lista2));
 
@@ -24,12 +23,12 @@ public class Exercicio03 {
 
         while(!lista1.isEmpty() & !lista2.isEmpty()){
             int i=0, j=0;
-            if (lista1.get(i) < (lista2.get(j))){
+            if (lista1.get(i) <= (lista2.get(j))){
                 listaIntercalada.add(lista1.get(i));
                 lista1.remove(i);
                 i++;
             }
-            else if (lista2.get(j) < (lista1.get(i))){
+            else if (lista2.get(j) <= (lista1.get(i))){
                 listaIntercalada.add(lista2.get(j));
                 lista2.remove(j);
             }
