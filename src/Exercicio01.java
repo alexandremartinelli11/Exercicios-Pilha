@@ -4,7 +4,6 @@ import java.lang.Integer;
 public class Exercicio01 {
     public static void main(String[] args) {
         Stack<Integer> pilha = new Stack<>();
-        int dias = 7;
 
         pilha.push(30);
         pilha.push(25);
@@ -14,52 +13,42 @@ public class Exercicio01 {
         pilha.push(50);
         pilha.push(45);
 
-        System.out.println(calculaDias(pilha,dias));
+        System.out.println(calculaDias(pilha));
     }
 
-    public static Stack<Integer> calculaDias(Stack<Integer> pilha, int dias){
+    public static int calculaDias(Stack<Integer> pilha){
         Stack<Integer> reserva =new Stack<>();
         int dia = 0;
+        int a = 0;
+        boolean removido = false;
 
-        for (int i = 0; i < dias; i++){
+        while(!removido){
             if (pilha.isEmpty()){
-                for(int j : reserva){
-                    pilha.push(j);
-                }
-                reserva.clear();
-                return pilha;
-            }
-            else{
-                reserva.push(pilha.pop());
-                boolean removido = false;
-                if (pilha.size() > 1){
-                    if (pilha.peek() > reserva.peek()){
-                        removido = true;
-                        pilha.pop();
-                    }
-                    reserva.push(pilha.pop());
-                    if (pilha.peek() < reserva.peek()){
-                        reserva.pop();
-                        removido= true;
-                    }
-                    if (removido){
-
-                        for(int j =0; j <= reserva.size(); j++) {
-                            if (pilha.peek() < reserva.peek()) {
-                                reserva.pop();
-                            }
-                        }
-                    }
-                }
-                if (!removido){
-                    pilha.push(99999);
-                    return pilha;
+                for(int j = 0; j < a; j++){
+                    pilha.push(reserva.pop());
                 }
                 dia++;
             }
+
+            else if (a == pilha.size()){
+                removido = true;
+            }
+
+            else{
+                reserva.push(pilha.pop());
+                if (pilha.size() > 1){
+                    if (pilha.peek() < reserva.peek()){
+                        reserva.pop();
+                    }
+                    a = pilha.size();
+
+
+                }
+            }
         }
 
-        return reserva;
+
+        return dia;
     }
 
 }
