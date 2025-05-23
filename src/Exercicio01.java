@@ -21,33 +21,39 @@ public class Exercicio01 {
         int dia = 0;
         int a = 0;
         boolean removido = false;
+        Stack<Integer> aux = new Stack<>();
+
 
         while(!removido){
             if (pilha.isEmpty()){
+                a=reserva.size();
                 for(int j = 0; j < a; j++){
                     pilha.push(reserva.pop());
+                    aux.push(pilha.peek());
                 }
                 dia++;
-            }
+                int k=0;
+                for (int i =0; i < pilha.size()-1; i++){
+                    int auxiliar = aux.pop();
 
-            else if (a == pilha.size()){
-                removido = true;
-            }
+                    if (aux.peek() != null && auxiliar < aux.peek()){
+                        k++;
 
+                    }
+                }
+                if (k==pilha.size()-1){
+                    removido = true;
+                }
+            }
             else{
                 reserva.push(pilha.pop());
                 if (pilha.size() > 1){
                     if (pilha.peek() < reserva.peek()){
                         reserva.pop();
                     }
-                    a = pilha.size();
-
-
                 }
             }
         }
-
-
         return dia;
     }
 
